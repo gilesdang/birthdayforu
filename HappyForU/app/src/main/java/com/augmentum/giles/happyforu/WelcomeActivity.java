@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 
 import com.augmentum.giles.happyforu.ui.LoginActivity;
 
@@ -62,6 +63,7 @@ public class WelcomeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_welcome);
     }
 
@@ -69,8 +71,8 @@ public class WelcomeActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_welcome, menu);
-        return true;
+//        getMenuInflater().inflate(R.menu.menu_welcome, menu);
+        return false;
     }
 
     @Override
