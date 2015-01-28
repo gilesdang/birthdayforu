@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_yellow">
+
+    <com.augmentum.giles.happyforu.CommonView.Image3DSwitchView
+        android:id="@+id/image_switch_view"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="200dp" >
+
+        <com.augmentum.giles.happyforu.CommonView.Image3DView
+            android:id="@+id/image1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/birthday" />
+
+        <com.augmentum.giles.happyforu.CommonView.Image3DView
+            android:id="@+id/image2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/birthday" />
+
+        <com.augmentum.giles.happyforu.CommonView.Image3DView
+            android:id="@+id/image3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/birthday" />
+
+        <com.augmentum.giles.happyforu.CommonView.Image3DView
+            android:id="@+id/image4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/birthday" />
+
+        <com.augmentum.giles.happyforu.CommonView.Image3DView
+            android:id="@+id/image5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/birthday" />
+
+        <com.augmentum.giles.happyforu.CommonView.Image3DView
+            android:id="@+id/image6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/birthday" />
+
+        <com.augmentum.giles.happyforu.CommonView.Image3DView
+            android:id="@+id/image7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/birthday" />
+    </com.augmentum.giles.happyforu.CommonView.Image3DSwitchView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:textSize="38px"
+        android:id="@+id/activity_photo_text_view_info"
+        android:text="hello"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@color/common_yellow"
+        android:textColor="@color/common_deep_blue"
+        android:visibility="invisible"
+        android:text="Continue >>"
+        android:id="@+id/activity_photo_button_continue"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

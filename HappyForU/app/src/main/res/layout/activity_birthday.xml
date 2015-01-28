@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+    <com.augmentum.giles.happyforu.com.fireview.MyView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_birthday_fire_view"/>
+
+    <com.augmentum.giles.happyforu.CommonView.GifImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/activity_birthday_image"
+        android:layout_centerInParent="true"
+        android:src="@drawable/birthday"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/activity_birthday_image2"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:src="@drawable/birthday"/>
+
+    <com.augmentum.giles.happyforu.CommonView.FlyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/activity_birthday_image"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:id="@+id/activity_birthday_info"/>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_yellow">
+
+    <com.augmentum.giles.happyforu.CommonView.RoundImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/activity_profile_image_photo"
+        android:layout_margin="20dp"
+        android:src="@drawable/birthday"
+        android:layout_gravity="center_horizontal"/>
+    <com.augmentum.giles.happyforu.CommonView.FlyTextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/activity_profile_text_view_info"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@color/common_yellow"
+        android:textColor="@color/common_deep_blue"
+        android:text="Continue >>"
+        android:id="@+id/activity_profile_button_continue"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

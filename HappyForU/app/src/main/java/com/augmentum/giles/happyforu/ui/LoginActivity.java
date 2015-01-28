@@ -1,6 +1,7 @@
 package com.augmentum.giles.happyforu.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -47,20 +48,19 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     mEditTextName.setText("楠");
                     mEditTextBirthday.setText("12-15");
                     mTextViewInfo.setVisibility(View.VISIBLE);
+                    mClickCount = 0;
                 }
-                String name = mEditTextName.getText().toString();
-                String birthday = mEditTextBirthday.getText().toString();
-                if (name == null || name.isEmpty() || !mNames.contains(name))
-                {
-                    mTextViewInfo.setVisibility(View.VISIBLE);
-                }
-                else if (birthday == null || birthday.isEmpty() || !mBirthday.contains(birthday))
-                {
-                    mTextViewInfo.setVisibility(View.VISIBLE);
-                }
-                else
-                {
-                    //TODO go to next activity
+                else {
+                    String name = mEditTextName.getText().toString();
+                    String birthday = mEditTextBirthday.getText().toString();
+                    if (name == null || name.isEmpty() || !mNames.contains(name)) {
+                        mTextViewInfo.setVisibility(View.VISIBLE);
+                    } else if (birthday == null || birthday.isEmpty() || !mBirthday.contains(birthday)) {
+                        mTextViewInfo.setVisibility(View.VISIBLE);
+                    } else {
+                        Intent intent = new Intent(LoginActivity.this, PhotoActivity.class);
+                        startActivity(intent);
+                    }
                 }
                 break;
             default:
