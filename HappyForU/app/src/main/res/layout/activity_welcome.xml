@@ -9,6 +9,7 @@
         android:id="@+id/activity_welcome_splash_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/welcome1"
         android:layout_centerInParent="true"/>
 
     <TextView
@@ -17,13 +18,14 @@
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/activity_welcome_splash_image"
-        android:text="C.Z."/>
+        android:text="我在成长，总有一天，我会足够优秀"/>
 
-    <TextView android:text="Copy Right"
+    <TextView android:text="Copyright U专属路人甲"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/common_blue"
         android:layout_marginBottom="20dp"/>
 
 </RelativeLayout>

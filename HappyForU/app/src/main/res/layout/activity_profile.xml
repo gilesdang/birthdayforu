@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/common_yellow">
+    android:background="@drawable/back3">
 
     <com.augmentum.giles.happyforu.CommonView.RoundImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/activity_profile_image_photo"
         android:layout_margin="20dp"
-        android:src="@drawable/birthday"
+        android:src="@drawable/profile2"
         android:layout_gravity="center_horizontal"/>
     <com.augmentum.giles.happyforu.CommonView.FlyTextView
         android:layout_width="match_parent"
@@ -25,7 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:background="@color/common_yellow"
         android:textColor="@color/common_deep_blue"
         android:text="Continue >>"
         android:id="@+id/activity_profile_button_continue"

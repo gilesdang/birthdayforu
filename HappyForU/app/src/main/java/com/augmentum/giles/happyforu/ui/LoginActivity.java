@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.augmentum.giles.happyforu.R;
 
@@ -28,7 +29,13 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mNames.add("楠");
+        mNames.add("楠");
+        mNames.add("楠");
+        mNames.add("楠");
         mBirthday.add("12-15");
+        mBirthday.add("08-30");
+        mBirthday.add("01-19");
+        mBirthday.add("03-10");
         mButtonLogin = (Button) findViewById(R.id.activity_login_button);
         mTextViewInfo = (TextView) findViewById(R.id.textView_info);
         mEditTextBirthday = (EditText)findViewById(R.id.editText_birthday);
@@ -42,7 +49,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         {
             case R.id.activity_login_button:
                 mClickCount ++;
-                if (mClickCount >5)
+                if (mClickCount >3)
                 {
                     mTextViewInfo.setText("好吧，你赢了，幸好我知道");
                     mEditTextName.setText("楠");
@@ -54,12 +61,13 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     String name = mEditTextName.getText().toString();
                     String birthday = mEditTextBirthday.getText().toString();
                     if (name == null || name.isEmpty() || !mNames.contains(name)) {
-                        mTextViewInfo.setVisibility(View.VISIBLE);
+                        Toast.makeText(LoginActivity.this, "笨～不会连自己名字都不知道了吧", Toast.LENGTH_SHORT).show();
                     } else if (birthday == null || birthday.isEmpty() || !mBirthday.contains(birthday)) {
-                        mTextViewInfo.setVisibility(View.VISIBLE);
+                        Toast.makeText(LoginActivity.this, "生日？好好想想，再试一次", Toast.LENGTH_SHORT).show();
                     } else {
-                        Intent intent = new Intent(LoginActivity.this, PhotoActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 }
                 break;

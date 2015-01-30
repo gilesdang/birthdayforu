@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -38,11 +39,11 @@ public class BirthDayActivity extends Activity implements SensorEventListener {
             super.handleMessage(msg);
             if (msg.what == MSG_INFO && !mIsSuccess)
             {
-                Toast.makeText(BirthDayActivity.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(BirthDayActivity.this, "摇一摇", Toast.LENGTH_SHORT).show();
             }
             else if (msg.what == MSG_BEGIN)
             {
-                mTextInfo.setTextColor(Color.YELLOW);
+                mTextInfo.setTextColor(getResources().getColor(R.color.common_yellow));
                 mTextInfo.setTexts("Surprise....");
                 mTextInfo.startAnimation();
             }
@@ -55,14 +56,14 @@ public class BirthDayActivity extends Activity implements SensorEventListener {
         setContentView(R.layout.activity_birthday);
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         mHandler.sendEmptyMessageDelayed(MSG_BEGIN, 3000l);
-        mHandler.sendEmptyMessageDelayed(MSG_INFO, 10000l);
+        mHandler.sendEmptyMessageDelayed(MSG_INFO, 8000l);
         mFireView = (MyView)findViewById(R.id.activity_birthday_fire_view);
         mImageGift = (GifImageView)findViewById(R.id.activity_birthday_image);
         mTextInfo = (FlyTextView)findViewById(R.id.activity_birthday_info);
         mImageViewEnd = (ImageView)findViewById(R.id.activity_birthday_image2);
         AnimationSet animationSet = new AnimationSet(true);
         AlphaAnimation animation = new AlphaAnimation(0, 1);
-        animation.setDuration(3000);
+        animation.setDuration(8000);
         animationSet.addAnimation(animation);
         mImageGift.startAnimation(animationSet);
     }
@@ -92,11 +93,32 @@ public class BirthDayActivity extends Activity implements SensorEventListener {
                     .abs(values[2]) > 17))
             {
                 mIsSuccess = true;
-                mTextInfo.setTextColor(Color.YELLOW);
+                mTextInfo.setTextColor(getResources().getColor(R.color.common_yellow));
                 mTextInfo.setTexts("Happy....");
                 mTextInfo.startAnimation();
                 mImageGift.setVisibility(View.INVISIBLE);
                 mImageViewEnd.setVisibility(View.VISIBLE);
+                AnimationSet animationSet = new AnimationSet(true);
+                AlphaAnimation animation = new AlphaAnimation(1, 0);
+                animation.setDuration(5000);
+                animation.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        mImageViewEnd.setVisibility(View.INVISIBLE);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                animationSet.addAnimation(animation);
+                mImageViewEnd.startAnimation(animationSet);
             }
 
         }

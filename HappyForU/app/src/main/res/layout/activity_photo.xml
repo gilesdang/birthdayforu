@@ -3,70 +3,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/common_yellow">
+    android:background="@drawable/background1">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="38px"
+        android:textColor="@color/common_green"
+        android:text="长    大"/>
     <com.augmentum.giles.happyforu.CommonView.Image3DSwitchView
         android:id="@+id/image_switch_view"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_height="200dp" >
+        android:layout_marginTop="20dp"
+        android:layout_height="250dp" >
 
         <com.augmentum.giles.happyforu.CommonView.Image3DView
             android:id="@+id/image1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/birthday" />
+            android:src="@drawable/end2" />
 
         <com.augmentum.giles.happyforu.CommonView.Image3DView
             android:id="@+id/image2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/birthday" />
+            android:src="@drawable/end3" />
 
         <com.augmentum.giles.happyforu.CommonView.Image3DView
             android:id="@+id/image3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/birthday" />
+            android:src="@drawable/profile1" />
 
         <com.augmentum.giles.happyforu.CommonView.Image3DView
             android:id="@+id/image4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/birthday" />
+            android:src="@drawable/taishan1" />
 
         <com.augmentum.giles.happyforu.CommonView.Image3DView
             android:id="@+id/image5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/birthday" />
+            android:src="@drawable/taishan2" />
 
         <com.augmentum.giles.happyforu.CommonView.Image3DView
             android:id="@+id/image6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/birthday" />
+            android:src="@drawable/end1" />
 
         <com.augmentum.giles.happyforu.CommonView.Image3DView
             android:id="@+id/image7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/birthday" />
+            android:src="@drawable/end4" />
     </com.augmentum.giles.happyforu.CommonView.Image3DSwitchView>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
-        android:textSize="38px"
+        android:textSize="32px"
         android:id="@+id/activity_photo_text_view_info"
-        android:text="hello"/>
+        android:text=""/>
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -75,7 +83,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:background="@color/common_yellow"
         android:textColor="@color/common_deep_blue"
         android:visibility="invisible"
         android:text="Continue >>"

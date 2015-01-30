@@ -28,12 +28,12 @@ public class ProfileActivity extends Activity{
         mButtonContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfileActivity.this,BirthDayActivity.class);
+                Intent intent = new Intent(ProfileActivity.this,PhotoActivity.class);
                 startActivity(intent);
             }
         });
         mImageViewPhoto.setCircle();
-        mTextInfo.setTexts("...................................");
+        mTextInfo.setTexts("年轻的我们，在成长的过程中，少不了磕磕绊绊，雨雨风风。可是人生路上，总会有盏心灵的明灯照耀我们，一步步前进。");
         mTextInfo.startAnimation();
     }
 }

@@ -22,7 +22,7 @@ public class WelcomeActivity extends Activity {
         public void run() {
             super.run();
             try {
-                Thread.sleep(6000);
+                Thread.sleep(4000);
                 Message msg = new Message();
                 msg.what = MSG_WAIT_CODE;
                 mHandler.sendMessage(msg);
